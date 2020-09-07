@@ -1,0 +1,19 @@
+header {
+  height: 400px;
+  background-color: #e69f93;;
+  background-image: url("/images/arches.png");
+}
+
+.avatar {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.fullname {
+  margin-top: -30px;
+  display: flex;
+  justify-content: center
+}
+

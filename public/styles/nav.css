@@ -1,0 +1,17 @@
+.nav-bar {
+  height: 120px;
+  color: #ffffff;
+  background-color: #4056A1;
+  display:flex;
+  justify-content: space-between;
+  
+
+}
+
+#logo {
+  font-family: 'Bungee', sans-serif; 
+}
+
+.banner {
+  padding: 1.5em;
+}
