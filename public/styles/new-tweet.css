@@ -1,0 +1,32 @@
+form {
+  display:flex;
+  flex-direction: column;
+}
+
+textarea {
+  width: 600px;
+  height: 40px;
+  background-color: #f4f1ec;
+  border: none;
+  border-bottom: 3px solid black;
+  margin-bottom: 20px;
+}
+
+form > label {
+  font-weight: 600;
+  color: grey;
+}
+
+form > div {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Bungee", sans-serif;
+}
+
+div > button {
+  
+  background-color: #4056A1;
+  color: #ffffff; 
+}
+
+

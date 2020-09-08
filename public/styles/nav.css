@@ -1,4 +1,4 @@
-.nav-bar {
+nav {
   height: 120px;
   color: #ffffff;
   background-color: #4056A1;
@@ -8,10 +8,11 @@
 
 }
 
-#logo {
+nav > span#logo {
   font-family: 'Bungee', sans-serif; 
 }
 
-.banner {
+
+nav > span {
   padding: 1.5em;
 }
