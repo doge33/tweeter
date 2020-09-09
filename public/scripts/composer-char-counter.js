@@ -9,5 +9,9 @@ $(document).ready(function() {
     let counter = $(this).siblings().find('.counter').text(remainder);
 
     $(counter).css({color: (remainder >= 0) ? '' : 'red'})
-});
+    
+
+
+  });
+  
 })

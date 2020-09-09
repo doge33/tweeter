@@ -1,25 +1,27 @@
-section.all-tweets {
-  padding:25px;
+#all-tweets {
   margin: 50px 0 50px 0;
-  border:3px solid black;
 }
-
-section.all-tweets:hover { 
+.single-tweet {
+  padding:25px;
+  border:3px solid black;
+  margin: 25px;
+}
+.single-tweet:hover { 
   box-shadow: 15px 15px 5px #C1C1DB;
 }
-.all-tweets:hover .user-handle {
+.single-tweet:hover .user-handle {
   display: block;
   color: #C1C1DB;
 }
 
-article > header, footer{
+.single-tweet > header, footer{
   height: 100px;
   display:flex;
   justify-content: space-between;
   align-items:center;
 }
 
-article > p {
+.single-tweet > p {
   padding-bottom: 25px;
   border-bottom: 3px solid black;
 }
@@ -29,11 +31,13 @@ article > p {
   align-items:center;
 }
 .tweet-profile img  {
-  width: 100px;
+  width: 80px;
+  margin-right: 10px;
 }
 
-header > span {
+.user-handle {
   display: none;
+  margin-right: 20px;
 }
 
 footer {
@@ -44,7 +48,7 @@ footer > span{
   font-size: smaller;
 }
 
-footer .img {
-  width: 20px;
+footer > section > img {
+  width: 30px;
   filter: invert(37%) sepia(20%) saturate(1725%) hue-rotate(189deg) brightness(84%) contrast(90%);
 }
