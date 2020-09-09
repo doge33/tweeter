@@ -44,7 +44,7 @@ footer > span{
   font-size: smaller;
 }
 
-footer > div > img {
+footer .img {
   width: 20px;
   filter: invert(37%) sepia(20%) saturate(1725%) hue-rotate(189deg) brightness(84%) contrast(90%);
 }
