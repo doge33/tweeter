@@ -1,10 +1,10 @@
-header {
+nav + header {
   height: 400px;
   background-color: #e69f93;;
   background-image: url("/images/arches.png");
 }
 
-header  > div {
+.profile {
   display: flex;
   flex-direction: column;
   align-items: center;

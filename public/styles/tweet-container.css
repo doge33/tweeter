@@ -1,0 +1,50 @@
+section.all-tweets {
+  padding:25px;
+  margin: 50px 0 50px 0;
+  border:3px solid black;
+}
+
+section.all-tweets:hover { 
+  box-shadow: 15px 15px 5px #C1C1DB;
+}
+.all-tweets:hover .user-handle {
+  display: block;
+  color: #C1C1DB;
+}
+
+article > header, footer{
+  height: 100px;
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+}
+
+article > p {
+  padding-bottom: 25px;
+  border-bottom: 3px solid black;
+}
+.tweet-profile {
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+}
+.tweet-profile img  {
+  width: 100px;
+}
+
+header > span {
+  display: none;
+}
+
+footer {
+  height: 50px;
+  padding: 0 15px 15px 15px;
+}
+footer > span{
+  font-size: smaller;
+}
+
+footer > div > img {
+  width: 20px;
+  filter: invert(37%) sepia(20%) saturate(1725%) hue-rotate(189deg) brightness(84%) contrast(90%);
+}
