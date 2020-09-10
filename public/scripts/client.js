@@ -7,36 +7,50 @@
 $(document).ready(() => {
 
   const loadTweets = function() {
-    console.log("POSt success")
+    //console.log("POSt success")
   
       $.ajax({
         url: '/tweets',
         method:"GET",
         success: (response) => {
           console.log("inside GET success")
+          console.log(response);
+          $('form').trigger('reset');
           $('#all-tweets').empty();
-          renderTweets(response);
-        
+          renderTweets(response);   
       }
     });//call this right after defining it, cuz if you don't, you will have to click submit twice to come to GET
   };
   loadTweets();
    
   $('form').on('submit', function(evt) {
-    evt.preventDefault();
+    //form-validation here:
+    const userInput = $('textArea').val();
+    
+    if (userInput.length === 0) {
+      evt.preventDefault();
+      alert("Looks like your tweet is empty. Please make sure you enter something ;)")
 
-    //get the data value of what is entered into the form, using serialize()
-    const tweetInput = $(this).serialize();
-    $.ajax({
-      url: '/tweets', 
-      method: 'POST',
-      dataType: 'text',
-      data: tweetInput,
-      success: loadTweets
+    } else if (userInput.length > 140) {
+      evt.preventDefault();
+      alert("Hey the tweet is too long. Please keep it within 140 characters!")
 
-    })    
-  });
-  
+    } else {
+      //if all is good, allow submission
+      evt.preventDefault();
+
+      //get the data value of what is entered into the form, using serialize()
+      const tweetInput = $(this).serialize();
+      $.ajax({
+        url: '/tweets', 
+        method: 'POST',
+        dataType: 'text',
+        data: tweetInput,
+        success: loadTweets
+
+      });
+    }
+  });  
 })
 
 
