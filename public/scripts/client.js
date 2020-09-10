@@ -6,6 +6,12 @@
 
 $(document).ready(() => {
 
+  $('#compose-tweet').click( function() {
+    $('.new-tweet').slideToggle(function(){
+      
+    });
+  });
+
   const loadTweets = function() {
     //console.log("POSt success")
   

@@ -11,11 +11,22 @@ nav {
 
 }
 
-nav > span#logo {
+#logo {
   font-family: 'Bungee', sans-serif; 
-}
-
-
-nav > span {
   padding: 1.5em;
 }
+
+
+#compose-tweet {
+  margin-right: 1.5em;
+  background: transparent;
+  box-shadow: 0px 0px 0px transparent;
+  border: 0px solid transparent;
+  text-shadow: 0px 0px 0px transparent;
+  background-color: inherit;
+  color: inherit;
+
+}
+
+
+
