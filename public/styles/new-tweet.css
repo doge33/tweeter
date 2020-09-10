@@ -1,36 +1,34 @@
 .new-tweet {
   width: 90%;
   margin: auto;
-  padding-top: 50px;
-  display: none;
+  padding-top: 2em;
+  display: none;  
 }
 
 form {
   display:flex;
   flex-direction: column;
   justify-content: center;
-  
+  font-size: smaller; 
+}
+
+form > label { 
+  color: grey;
 }
 
 textarea {
-
-  height: 60px;
+  height: 3em;
   background-color: #f4f1ec;
   border: none;
-  border-bottom: 3px solid black;
-  margin-bottom: 20px;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 0.7em;
  
-}
-
-form > label {
-  font-weight: 600;
-  color: grey;
 }
 
 form > div {
   display: flex;
   justify-content: space-between;
-  font-family: "Bungee", sans-serif;
+  font-family: "Bungee", sans-serif; 
 }
 
 div > button {
@@ -38,18 +36,12 @@ div > button {
   color: #ffffff; 
 }
 
-/*
-.normal {
-  color: #545149;
-}
-*/
-
 .error {
   width: 70%;
-  margin: 15px auto auto auto;
-  padding: 10px;
+  margin: 0.5em auto auto auto;
+  padding: 0.5em;
   font-size: smaller;
-  border: 2px solid red;
+  border: 0.1em solid red;
   color: red;
   display:none;
 }
@@ -60,8 +52,31 @@ div > button {
 }
 
 .error > div {
-  margin-top: 10px;
+  margin-top: 0.5em;
   text-align: center;
 }
 
+
+/*tablet style*/
+@media only screen and (min-width: 768px)  {
+
+  form {
+    font-size: larger;
+    font-weight: 600;
+  }
+  
+}
+
+/*desktop style*/
+@media only screen and (min-width: 1024px)  {
+
+  .new-tweet {
+    margin-bottom: -2em;
+  }
+
+  .error {
+    font-size: larger;
+  }
+  
+}
 

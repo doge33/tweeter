@@ -1,16 +1,15 @@
 nav {
-  height: 90px;
+  background-color: #e69f93;
   color: #ffffff;
-  background-color: #4056A1;
+  background-image: url("/images/arches.png");
+  font-size: 80%;
   display:flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
   width: 100%;
   top: 0;
-
 }
-
 #logo {
   font-family: 'Bungee', sans-serif; 
   padding: 1.5em;
@@ -18,15 +17,31 @@ nav {
 
 
 #compose-tweet {
-  margin-right: 1.5em;
+  padding: 1.5em;
   background: transparent;
-  box-shadow: 0px 0px 0px transparent;
-  border: 0px solid transparent;
-  text-shadow: 0px 0px 0px transparent;
-  background-color: inherit;
+  box-shadow: 0 0 0 transparent;
+  border: 0 solid transparent;
+  text-shadow: 0 0 0 transparent;
+  /*background-color: inherit;*/
   color: inherit;
 
 }
 
+/*tablet style*/
+@media only screen and (min-width: 768px)  {
+  nav {
+    font-size: 100%;
+  
+  }
+}
 
+/*desktop style*/
+@media only screen and (min-width: 1024px)  {
+  nav {
+    height: 5em; 
+    background-color: #4056A1;  
+  
+  }
+  
+}
 
