@@ -26,19 +26,23 @@ $(document).ready(() => {
   $('form').on('submit', function(evt) {
     //form-validation here:
     const userInput = $('textArea').val();
+    $('.error').slideUp();
     
     if (userInput.length === 0) {
       evt.preventDefault();
-      alert("Looks like your tweet is empty. Please make sure you enter something ;)")
+      $('.empty').slideDown(function() {
+        $('.empty > div').text('Your tweet is empty. Please make sure you enter something!');
+      })
 
     } else if (userInput.length > 140) {
       evt.preventDefault();
-      alert("Hey the tweet is too long. Please keep it within 140 characters!")
+      $('.too-long').slideDown(function() {
+        $('.too-long > div').text('Please keep it within 140 characters!');
+      })
 
     } else {
       //if all is good, allow submission
       evt.preventDefault();
-
       //get the data value of what is entered into the form, using serialize()
       const tweetInput = $(this).serialize();
       $.ajax({
@@ -53,9 +57,31 @@ $(document).ready(() => {
   });  
 })
 
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
+//make timestamp into ..days ago OR hours ago
+const daysAgo = (timeCreated) => {
+  let timeDifference = (Date.now() - timeCreated);
+
+  if (timeDifference >= 86400000) {
+    return Math.floor(timeDifference / 86400000) + " days ago";
+
+  } else if (timeDifference >= 3600000){
+    return Math.floor(timeDifference / 3600000) + " hours ago";
+
+  } else {
+    return Math.floor(timeDifference / 60000) + " minutes ago";
+  }
+};
 
 //this function decides what info to grab from each tweet object, and the html of it(same as tweet-container)
  const createTweetElement = (tweetObj) => {
+
+  const timestamp = daysAgo(tweetObj.created_at);
 
   const $tweet = $(`
   <article class="single-tweet">
@@ -69,10 +95,10 @@ $(document).ready(() => {
           </span>
         </header>
         <p>
-          ${tweetObj.content.text}
+          ${escape(tweetObj.content.text)}
         </p>
         <footer>
-          <span>${tweetObj.created_at}</span>
+          <span>${timestamp}</span>
           <section>
             <img src="./images/flag-alt-solid-24.png">
             <img src="./images/repost-regular-24.png">
@@ -92,3 +118,4 @@ const renderTweets = (tweetsArray) => {
   }
 
 }
+

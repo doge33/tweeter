@@ -40,8 +40,26 @@ div > button {
 .normal {
   color: #545149;
 }
-.error {
-  color: red;
-}
 */
+
+.error {
+  width: 70%;
+  margin: 15px auto auto auto;
+  padding: 10px;
+  font-size: smaller;
+  border: 2px solid red;
+  color: red;
+  display:none;
+}
+
+.error > img {
+  display: block;
+  margin: 0 auto 0 auto;
+}
+
+.error > div {
+  margin-top: 10px;
+  text-align: center;
+}
+
 
