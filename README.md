@@ -11,8 +11,11 @@ On top of the core functionalities, I also implemented extra features from two s
 ## Final Product
 
 !["screenshot of new-tweet box(tablet-screen)"](https://github.com/doge33/tweeter/blob/master/docs/tweet-box.png)
-!["screenshot of desktop-size screen(& error message)"](https://github.com/doge33/tweeter/blob/master/docs/desktop-screen.png)
+
 !["screenshot of mobile-size screen"](https://github.com/doge33/tweeter/blob/master/docs/mobile-screen.png)
+
+!["screenshot of desktop-size screen(& error message)"](https://github.com/doge33/tweeter/blob/master/docs/desktop-screen.png)
+
 
 ## Getting Started
 
