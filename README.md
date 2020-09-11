@@ -28,3 +28,6 @@ On top of the core functionalities, I also implemented extra features from two s
 
 - Express
 - Node 5.10.x or above
+- body-parser
+- chance
+- md5
