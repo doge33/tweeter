@@ -1,0 +1,49 @@
+nav {
+  background-color: #e69f93;
+  color: #ffffff;
+  background-image: url("/images/arches.png");
+  font-size: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+nav #logo {
+  font-family: 'Bungee', sans-serif;
+  padding: 1.5em;
+}
+
+nav #compose-tweet {
+  padding: 1.5em;
+  background: transparent;
+  -webkit-box-shadow: 0 0 0 transparent;
+          box-shadow: 0 0 0 transparent;
+  border: 0 solid transparent;
+  text-shadow: 0 0 0 transparent;
+  color: inherit;
+}
+
+/*tablet style*/
+@media only screen and (min-width: 768px) {
+  nav {
+    font-size: 100%;
+  }
+}
+
+/*desktop style*/
+@media only screen and (min-width: 1024px) {
+  nav {
+    height: 5em;
+    background-color: #4056A1;
+  }
+}
+/*# sourceMappingURL=nav.css.map */

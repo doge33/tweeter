@@ -6,27 +6,25 @@
 
 $(document).ready(() => {
 
+  //click top-right corner to show/hide new-tweet form;
   $('#compose-tweet').click( function() {
-    $('.new-tweet').slideToggle(function(){
-      
+    $('.new-tweet').slideToggle(function(){   
     });
   });
 
   const loadTweets = function() {
-    //console.log("POSt success")
-  
+
       $.ajax({
         url: '/tweets',
         method:"GET",
         success: (response) => {
-          console.log("inside GET success")
-          console.log(response);
           $('form').trigger('reset');
           $('#all-tweets').empty();
           renderTweets(response);   
       }
-    });//call this right after defining it, cuz if you don't, you will have to click submit twice to come to GET
+    });
   };
+  //GET right after definition to load initial tweets;
   loadTweets();
    
   $('form').on('submit', function(evt) {
@@ -49,27 +47,30 @@ $(document).ready(() => {
     } else {
       //if all is good, allow submission
       evt.preventDefault();
-      //get the data value of what is entered into the form, using serialize()
+      //serialize value of form because server is set to receive query string
       const tweetInput = $(this).serialize();
+
       $.ajax({
         url: '/tweets', 
         method: 'POST',
         dataType: 'text',
         data: tweetInput,
         success: loadTweets
-
       });
     }
   });  
 })
 
+//-------helper functions 1: security & timestamp------//
+
+//helps escape insecure text that can break the page
 const escape =  function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 }
 
-//make timestamp into ..days ago OR hours ago
+//this helper can turn timestamp into ..days ago OR hours OR ...minutes ago
 const daysAgo = (timeCreated) => {
   let timeDifference = (Date.now() - timeCreated);
 
@@ -83,6 +84,8 @@ const daysAgo = (timeCreated) => {
     return Math.floor(timeDifference / 60000) + " minutes ago";
   }
 };
+
+//------helper functions 2: define how to create new tweet------//
 
 //this function decides what info to grab from each tweet object, and the html of it(same as tweet-container)
  const createTweetElement = (tweetObj) => {
@@ -116,6 +119,7 @@ const daysAgo = (timeCreated) => {
   return $tweet;
 }
 
+//this helper loops through an array of tweets from database
 const renderTweets = (tweetsArray) => {
 
   for (tweetObj of tweetsArray) {

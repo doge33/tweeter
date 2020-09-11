@@ -1,0 +1,92 @@
+.new-tweet {
+  width: 90%;
+  margin: auto;
+  padding-top: 2em;
+  display: none;
+}
+
+.new-tweet form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1em;
+}
+
+.new-tweet form label {
+  color: grey;
+}
+
+.new-tweet form textarea {
+  height: 3em;
+  background-color: #f4f1ec;
+  border: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 0.7em;
+}
+
+.new-tweet form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: "Bungee", sans-serif;
+}
+
+.new-tweet form div button {
+  background-color: #4056A1;
+  color: #ffffff;
+}
+
+.new-tweet .error {
+  width: 70%;
+  margin: 0.5em auto auto auto;
+  padding: 0.5em;
+  font-size: smaller;
+  border: 0.1em solid red;
+  color: red;
+  display: none;
+}
+
+.new-tweet .error > img {
+  display: block;
+  margin: 0 auto 0 auto;
+}
+
+.new-tweet .error > div {
+  margin-top: 0.5em;
+  text-align: center;
+}
+
+/*tablet style*/
+@media only screen and (min-width: 768px) {
+  form {
+    font-weight: 600;
+  }
+}
+
+/*desktop style*/
+@media only screen and (min-width: 1024px) {
+  .new-tweet {
+    margin-bottom: -2em;
+    padding-top: 4em;
+  }
+  .new-tweet form {
+    font-size: larger;
+  }
+  .new-tweet form textarea {
+    height: 2em;
+  }
+  .new-tweet .error {
+    font-size: larger;
+  }
+}
+/*# sourceMappingURL=new-tweet.css.map */

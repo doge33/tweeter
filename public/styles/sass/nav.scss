@@ -1,0 +1,49 @@
+@mixin horizontal-spread {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+$nav-padding: 1.5em;
+
+nav {
+  background-color: #e69f93;
+  color: #ffffff;
+  background-image: url("/images/arches.png");
+  font-size: 80%;
+  @include horizontal-spread;
+  position: fixed;
+  width: 100%;
+  top: 0;
+
+  #logo {
+    font-family: 'Bungee', sans-serif; 
+    padding: $nav-padding
+  }
+
+  #compose-tweet {
+    padding: $nav-padding;
+    background: transparent;
+    box-shadow: 0 0 0 transparent;
+    border: 0 solid transparent;
+    text-shadow: 0 0 0 transparent;
+    color: inherit;
+  }
+}
+
+/*tablet style*/
+@media only screen and (min-width: 768px)  {
+  nav {
+    font-size: 100%;
+  
+  }
+}
+
+/*desktop style*/
+@media only screen and (min-width: 1024px)  {
+  nav {
+    height: 5em; 
+    background-color: #4056A1;  
+  
+  }
+  
+}

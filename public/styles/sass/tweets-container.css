@@ -1,0 +1,132 @@
+#all-tweets {
+  margin: 0.5em 0 1em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: smaller;
+}
+
+.single-tweet {
+  padding: 1em 1em 0 1em;
+  border: 0.1em solid black;
+  margin-top: 1.5em;
+  width: 90%;
+}
+
+.single-tweet:hover {
+  -webkit-box-shadow: 0.8em 0.8em 0.5em #C1C1DB;
+          box-shadow: 0.8em 0.8em 0.5em #C1C1DB;
+}
+
+.single-tweet:hover footer > section > img {
+  display: block;
+}
+
+.single-tweet header {
+  height: 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.single-tweet header .tweet-profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.single-tweet header .tweet-profile img {
+  width: 3em;
+  margin-right: 1em;
+}
+
+.single-tweet header .user-handle {
+  color: #a7a7b8;
+  margin-right: 1em;
+}
+
+.single-tweet p {
+  padding-bottom: 1em;
+  border-bottom: 0.1em solid black;
+}
+
+footer {
+  height: 2em;
+  padding: 0 0.5em 1.5em 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer span {
+  font-size: smaller;
+}
+
+footer section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+footer section img {
+  width: 1em;
+  -webkit-filter: invert(37%) sepia(20%) saturate(1725%) hue-rotate(189deg) brightness(84%) contrast(90%);
+          filter: invert(37%) sepia(20%) saturate(1725%) hue-rotate(189deg) brightness(84%) contrast(90%);
+  display: none;
+}
+
+/*tablet style*/
+@media only screen and (min-width: 768px) {
+  #all-tweets {
+    font-size: larger;
+  }
+}
+
+/*desktop style*/
+@media only screen and (min-width: 1024px) {
+  #all-tweets {
+    margin-top: 3em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #all-tweets .single-tweet {
+    padding: 1em 1em 0 1em;
+    border: 0.1em solid black;
+    margin-top: 1.5em;
+    width: 90%;
+  }
+}
+/*# sourceMappingURL=tweets-container.css.map */
